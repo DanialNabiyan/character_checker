@@ -1,2 +1,5 @@
 ﻿  character_checker.cpp
+C:\Users\Dani.DESKTOP-F86HKR4\source\repos\character_checker\character_checker\character_checker.cpp(37,20): warning C4129: ':': unrecognized character escape sequence
+C:\Users\Dani.DESKTOP-F86HKR4\source\repos\character_checker\character_checker\character_checker.cpp(43,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Dani.DESKTOP-F86HKR4\source\repos\character_checker\character_checker\character_checker.cpp(117,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
   character_checker.vcxproj -> C:\Users\Dani.DESKTOP-F86HKR4\source\repos\character_checker\x64\Debug\character_checker.exe

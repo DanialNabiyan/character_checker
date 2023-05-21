@@ -1,4 +1,4 @@
-// Character_Checker.cpp : This file contains the 'main' function. Program execution begins and ends there.
+﻿// Character_Checker.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
@@ -9,6 +9,47 @@ using namespace std;
 bool checkfile_exist(const std::string& filename) {
     ifstream file(filename);
     return file.good();
+}
+
+void RandomGenerator() {
+    // Get filename and path from user
+    string filename = "";
+    string path = "";
+    cout << "Enter random character filename: ";
+    cin >> filename;
+    cout << "Enter random character path: ";
+    cin >> path;
+
+    // Concatenate filename and path to create full file path
+    string filepath = path + "/" + filename;
+
+    // Create a new file with the given filename and path
+    ofstream outfile(filepath);
+
+    if (!outfile) {
+        cerr << "Failed to create file!";
+    }
+
+    cout << "File created successfully.\n";
+
+
+    // کاراکترهای پر استفاده در تولید فایل رندوم
+    string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()+~`|}{[]\:;?><,./-=";
+    int char_index = 0;
+    int file_size = 100; // سایز فایل تولیدی (به بیت)
+
+
+    // تولید داده‌های رندوم به صورت تصادفی
+    srand(time(0));
+
+    for (int i = 0; i < file_size; i++) {
+        char_index = rand() % chars.length(); // اندیس کاراکتر رندوم
+        outfile << chars[char_index]; // نوشتن کاراکتر رندوم در فایل
+    }
+
+    outfile.close();
+
+
 }
 void splitfile() {
     string mainfilename = "";
@@ -35,7 +76,7 @@ void splitfile() {
 
     if (!checkfile_exist(mainfilename)) {
 
-        // mamad inja ye alert bezar bego file does not exist 
+        cerr << "File not found!";
     }
     else
     {
@@ -60,8 +101,6 @@ void splitfile() {
             else
             {
                 if (ch != '\n') {
-                    std::cout << ch << std::endl;
-
                     ofstream charfile(specialcharfile, ios::app);
                     charfile << ch;
                     char_count++;
@@ -74,8 +113,9 @@ void splitfile() {
     }
 
 }
-int main()
+void main()
 {
+    RandomGenerator();
     splitfile();
 
 }
