@@ -1,5 +1,4 @@
 ﻿  character_checker.cpp
-C:\Users\Dani.DESKTOP-F86HKR4\source\repos\character_checker\character_checker\character_checker.cpp(37,20): warning C4129: ':': unrecognized character escape sequence
-C:\Users\Dani.DESKTOP-F86HKR4\source\repos\character_checker\character_checker\character_checker.cpp(43,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Dani.DESKTOP-F86HKR4\source\repos\character_checker\character_checker\character_checker.cpp(117,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.35.32215\include\filesystem(13): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+C:\Users\Dani.DESKTOP-F86HKR4\source\repos\character_checker\character_checker\character_checker.cpp(55,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   character_checker.vcxproj -> C:\Users\Dani.DESKTOP-F86HKR4\source\repos\character_checker\x64\Debug\character_checker.exe
